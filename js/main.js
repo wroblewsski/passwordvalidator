@@ -27,4 +27,14 @@ const showMsg = () => {
 	}
 };
 
-pass.addEventListener('keyup', showMsg);
+const checkPassword = () => {
+    if(pass.value !== '') {
+        showMsg()
+    } else {
+        p.textContent = 'wprowadź hasło';
+		p.style.color = '';
+    }
+}
+
+pass.addEventListener('keyup', checkPassword);
+
